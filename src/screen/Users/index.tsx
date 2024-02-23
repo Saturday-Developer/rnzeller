@@ -29,7 +29,6 @@ const User = () => {
   }, [data?.listZellerCustomers]);
 
 
-
   return (
     <View style={styles.container}>
       {
@@ -38,7 +37,7 @@ const User = () => {
         )
       }
       {
-        users && (
+        users.length > 0 && (
           <>
             <SelectUserType filterUsers={filterUsers} userType={userType} />
             <UserList users={users} />
